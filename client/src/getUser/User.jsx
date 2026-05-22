@@ -43,8 +43,8 @@ function User() {
         Add User <i class="fa-solid fa-user-plus"></i>
       </Link>
 
-      {users.length == 0 ? (
-        <div className='nodata'>
+      {users.length === 0 ? (
+        <div className="nodata">
           <h3>No Data to Display..</h3>
           <p>Please Add New User</p>
         </div>
