@@ -23,19 +23,20 @@ function Update() {
   };
 
   useEffect(()=>{
-    axios.get(`http://localhost:8000/api/user/${id}`)
-    .then((response)=>{
-      setUser(response.data)
-    })
-    .catch((error) =>{
-      console.log(error)
-    })
+    axios
+      .get(`https://curd-app-dihk.onrender.com/api/user/${id}`)
+      .then((response) => {
+        setUser(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },[id])
 
   const submitForm = async (e) => {
     e.preventDefault();
     await axios
-      .put(`http://localhost:8000/api/update/user/${id}`, user)
+      .put(`https://curd-app-dihk.onrender.com/api/update/user/${id}`, user)
       .then((response) => {
         // console.log("User created Successfully")
         toast.success(response.data.message, { position: "top-right" });

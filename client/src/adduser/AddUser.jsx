@@ -20,15 +20,16 @@ function AddUser() {
 
   const submitForm = async (e)=>{
     e.preventDefault();
-    await axios.post("http://localhost:8000/api/user" , user)
-    .then((response)=>{
-      // console.log("User created Successfully")
-      toast.success(response.data.message , {position:"top-right"});
-      navigate("/");
-    })
-    .catch((error)=>{
-      console.log(error);
-    })
+    await axios
+      .post("https://curd-app-dihk.onrender.com/api/user", user)
+      .then((response) => {
+        // console.log("User created Successfully")
+        toast.success(response.data.message, { position: "top-right" });
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
   return (
     <div className="addUser">
