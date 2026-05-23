@@ -39,7 +39,7 @@ function User() {
 
   return (
     <div className="userTable">
-      <Link to="/add" type="button" class="btn btn-primary">
+      <Link to="/add" type="button" className="btn btn-primary">
         Add User <i class="fa-solid fa-user-plus"></i>
       </Link>
 
@@ -71,9 +71,9 @@ function User() {
                     <Link
                       to={`/update/` + user._id}
                       type="button"
-                      class="btn btn-info"
+                      className="btn btn-info"
                     >
-                      <i class="fa-solid fa-pen-to-square"></i>
+                      <i className="fa-solid fa-pen-to-square"></i>
                     </Link>
 
                     <button
@@ -81,7 +81,7 @@ function User() {
                       type="button"
                       class="btn btn-danger"
                     >
-                      <i class="fa-solid fa-trash"></i>
+                      <i className="fa-solid fa-trash"></i>
                     </button>
                   </td>
                 </tr>

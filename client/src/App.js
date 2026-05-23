@@ -1,13 +1,11 @@
-
-import AddUser from './adduser/AddUser';
-import './App.css';
-import User from './getUser/User';
+import AddUser from "./adduser/AddUser";
+import "./App.css";
+import User from "./getUser/User";
 import Update from "./updateuser/Update";
-import {createBrowserRouter, RouterProvider} from "react-router-dom"
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 function App() {
-
   const route = createBrowserRouter([
     {
       path: "/",
@@ -22,12 +20,14 @@ function App() {
       element: <Update />,
     },
   ]);
+
   return (
     <div className="App">
-      <RouterProvider router={route} ></RouterProvider>
+      <Toaster />
+
+      <RouterProvider router={route}></RouterProvider>
     </div>
   );
 }
-
 
 export default App;
